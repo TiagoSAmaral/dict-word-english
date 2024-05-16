@@ -1,0 +1,11 @@
+# The docs are available on https://docs.fastlane.tools/actions/match
+storage_mode("git")
+git_url(ENV['GITHUB_REPO_MATCH_PATH'])
+git_basic_authorization(ENV['PRIVATE_GITHUB_ACCESS_TOKEN'])
+git_branch("main")
+# username("user@fastlane.tools") # Your Apple Developer Portal username
+username(ENV['APPLE_USER_EMAIL'])
+
+# app_identifier(["tools.fastlane.app", "tools.fastlane.app2"])
+app_identifier([ENV["APP_IDENTIFIER"]])
+type("appstore") # The default type, can be: appstore, adhoc, enterprise or development

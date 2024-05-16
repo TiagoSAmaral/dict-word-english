@@ -11,6 +11,8 @@
 		CF1BBC112BF5B513007FDF9B /* ListSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC102BF5B513007FDF9B /* ListSceneFactory.swift */; };
 		CF1BBC142BF5B569007FDF9B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC132BF5B569007FDF9B /* Model.swift */; };
 		CF1BBC182BF5B5EC007FDF9B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC172BF5B5EC007FDF9B /* NavigationController.swift */; };
+		CF1BBC1B2BF5C10B007FDF9B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CF1BBC1A2BF5C10B007FDF9B /* Alamofire */; };
+		CF1BBC202BF5C243007FDF9B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF1BBC1F2BF5C243007FDF9B /* RealmSwift */; };
 		CF456F4D2BF55DF500634CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF456F4C2BF55DF500634CB6 /* AppDelegate.swift */; };
 		CF456F512BF55DF500634CB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF456F502BF55DF500634CB6 /* ListViewController.swift */; };
 		CF456F562BF55DF800634CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF456F552BF55DF800634CB6 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1BBC202BF5C243007FDF9B /* RealmSwift in Frameworks */,
+				CF1BBC1B2BF5C10B007FDF9B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +185,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				CF1BBC242BF5CB39007FDF9B /* PBXTargetDependency */,
 			);
 			name = dictWordEnglish;
+			packageProductDependencies = (
+				CF1BBC1A2BF5C10B007FDF9B /* Alamofire */,
+				CF1BBC1F2BF5C243007FDF9B /* RealmSwift */,
+			);
 			productName = dictWordEnglish;
 			productReference = CF456F492BF55DF500634CB6 /* dictWordEnglish.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +242,11 @@
 				Base,
 			);
 			mainGroup = CF456F402BF55DF500634CB6;
+			packageReferences = (
+				CF1BBC192BF5C10B007FDF9B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CF1BBC1C2BF5C242007FDF9B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CF1BBC212BF5C9C8007FDF9B /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = CF456F4A2BF55DF500634CB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,6 +301,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CF1BBC242BF5CB39007FDF9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CF1BBC232BF5CB39007FDF9B /* SwiftLintBuildToolPlugin */;
+		};
 		CF456F612BF55DF800634CB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CF456F482BF55DF500634CB6 /* dictWordEnglish */;
@@ -556,6 +574,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF1BBC192BF5C10B007FDF9B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.9.1;
+			};
+		};
+		CF1BBC1C2BF5C242007FDF9B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CF1BBC212BF5C9C8007FDF9B /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.55.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF1BBC1A2BF5C10B007FDF9B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1BBC192BF5C10B007FDF9B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CF1BBC1F2BF5C243007FDF9B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1BBC1C2BF5C242007FDF9B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		CF1BBC232BF5CB39007FDF9B /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF1BBC212BF5C9C8007FDF9B /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CF456F412BF55DF500634CB6 /* Project object */;
 }

@@ -1,0 +1,140 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+    default_device = "iPhone 14 Pro (17.0)"
+	default_sdk = "iphoneos17.2"
+	scheme_release= "release"
+	scheme_debug = "debug"
+	scheme_tests = "unit-tests"
+
+	configuration_release = "Release"
+	configuration_debug = "Debug"
+
+	app_name_xcodeproj = "dictWordEnglish.xcodeproj"
+
+	name_folder_code_coverage = "code-coverage-report"
+    ipa_build_file_name = "dicWordEnglish.ipa"
+
+    ###################################
+	##  	   DEVELOP TOOLS  		 ## 
+	###################################
+
+	desc "Clear XCov output folder"
+	lane :clear_xcov_report do
+		sh "cd .. && if [ -d '" + name_folder_code_coverage + "' ]; then rm -Rf " + name_folder_code_coverage + "; fi"
+	end
+
+	desc "Create coverage report"
+	lane :coverage do 
+		clear_derived_data
+		clear_xcov_report
+
+		run_tests(scheme: scheme_tests, devices: [default_device])
+		# https://docs.fastlane.tools/actions/xcov/
+		xcov(
+			project: app_name_xcodeproj,
+			scheme: scheme_tests,
+			output_directory: name_folder_code_coverage,
+			ignore_file_path: "./.xcovignore"
+		)
+	end
+
+	desc "Used by Development to keep code quality. Use command: 'fastlane check_code dev:true'"
+	lane :check_code do |options|
+		clear_derived_data
+		scan(code_coverage: true)
+		if options[:dev]
+			coverage
+		end
+	end
+
+    ###################################
+	##  DELIVERY APP TO APPLE STORE  ##
+	###################################
+    desc "Delivery to App Store"
+	lane :delivery_appstore do 
+
+		clear_derived_data
+		
+		cocoapods(clean_install: true)
+
+		# run_tests(shceme: scheme_release, devices: [default_device])
+		match(type: "appstore", readonly: is_ci)
+		
+		# gym is a alias for "build_app"
+		# and build_ios_app is a alias for `build_app` only with iOS options
+		build_ios_app(
+			# workspace: app_name_workspace,
+            project: app_name_xcodeproj,
+			configuration: configuration_release,
+			scheme: scheme_release,
+			silent: true,
+			clean: true,
+			use_system_scm: true,
+			output_directory: "./build",   # Destination directory. Defaults to current directory.
+			output_name: ipa_build_file_name, # specify the name of the .ipa file to generate (including file extension)
+			sdk: default_sdk                # use SDK as the name or path of the base SDK when building the project.
+		)
+
+		# Delivery
+		deliver(
+			submit_for_review: false,
+			automatic_release: false,
+			force: true, # Skip HTMl report verification
+			skip_metadata: true,
+			skip_screenshots: true,
+			skip_binary_upload: true
+		)
+
+		upload_symbols
+		
+		# success_message message: "Enviado com sucesso para Produção"
+	end
+
+	desc "Delivery to Testflight"
+	lane :delivery_testflight do 
+
+		clear_derived_data
+		cocoapods(clean_install: true)
+		# run_tests(shceme: scheme_release, devices: [default_device])
+		match(readonly: is_ci)
+		
+		build_ios_app(
+			# workspace: app_name_workspace,
+            project: app_name_xcodeproj,
+			configuration: configuration_release,
+			scheme: scheme_release,
+			silent: true,
+			clean: true,
+			output_name: "dicWordEnglish.ipa", # specify the name of the .ipa file to generate (including file extension)
+			sdk: default_sdk                # use SDK as the name or path of the base SDK when building the project.
+		)
+
+		# Pilot
+		upload_to_testflight(
+			skip_submission: true,
+			skip_waiting_for_build_processing: true,
+			team_id: "f5eefa41-a03f-4b97-8d7a-2a03f92c123b",
+			team_name: "App Store Connect Users"
+		)
+
+		upload_symbols
+		# success_message message: "Enviado com sucesso para Testflight"
+	end
+end
