@@ -88,26 +88,26 @@
 		CF1BBC4A2BF5CEE4007FDF9B /* scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BBC4B2BF5CEE4007FDF9B /* DetailScene */,
-				CF1BBC4C2BF5CEE4007FDF9B /* ListScene */,
+				CF1BBC4B2BF5CEE4007FDF9B /* detail scene */,
+				CF1BBC4C2BF5CEE4007FDF9B /* list scene */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
 		};
-		CF1BBC4B2BF5CEE4007FDF9B /* DetailScene */ = {
+		CF1BBC4B2BF5CEE4007FDF9B /* detail scene */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = DetailScene;
+			path = "detail scene";
 			sourceTree = "<group>";
 		};
-		CF1BBC4C2BF5CEE4007FDF9B /* ListScene */ = {
+		CF1BBC4C2BF5CEE4007FDF9B /* list scene */ = {
 			isa = PBXGroup;
 			children = (
 				CF1BBC4D2BF5CEE4007FDF9B /* ListViewController.swift */,
 				CF1BBC4E2BF5CEE4007FDF9B /* ListSceneFactory.swift */,
 			);
-			path = ListScene;
+			path = "list scene";
 			sourceTree = "<group>";
 		};
 		CF1BBC4F2BF5CEE4007FDF9B /* shared */ = {
@@ -134,17 +134,17 @@
 		CF1BBC562BF5CEE4007FDF9B /* view components */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BBC572BF5CEE4007FDF9B /* NavigationController */,
+				CF1BBC572BF5CEE4007FDF9B /* navigationController */,
 			);
 			path = "view components";
 			sourceTree = "<group>";
 		};
-		CF1BBC572BF5CEE4007FDF9B /* NavigationController */ = {
+		CF1BBC572BF5CEE4007FDF9B /* navigationController */ = {
 			isa = PBXGroup;
 			children = (
 				CF1BBC582BF5CEE4007FDF9B /* NavigationController.swift */,
 			);
-			path = NavigationController;
+			path = navigationController;
 			sourceTree = "<group>";
 		};
 		CF1BBC592BF5CEE4007FDF9B /* interfaces */ = {
