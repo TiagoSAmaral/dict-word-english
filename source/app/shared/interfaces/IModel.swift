@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Model {
+protocol IModel {
     
 }
