@@ -25,7 +25,6 @@
 		CF6A76E82BF670A500C65D07 /* NetworkConectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A76E72BF670A500C65D07 /* NetworkConectable.swift */; };
 		CF6A76EA2BF670B700C65D07 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A76E92BF670B700C65D07 /* NetworkError.swift */; };
 		CF6A76ED2BF6712100C65D07 /* LocalizedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A76EC2BF6712000C65D07 /* LocalizedText.swift */; };
-		CF6A76F22BF6715C00C65D07 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF6A76F02BF6715C00C65D07 /* Localized.strings */; };
 		CF6A76F52BF671A200C65D07 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF6A76F32BF671A200C65D07 /* Localized.strings */; };
 		CF6A76F82BF672F200C65D07 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A76F72BF672F200C65D07 /* KeychainAccess.swift */; };
 		CF6A76FB2BF6A13F00C65D07 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = CF6A76FA2BF6A13F00C65D07 /* InlineSnapshotTesting */; };
@@ -69,7 +68,6 @@
 		CF6A76E72BF670A500C65D07 /* NetworkConectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConectable.swift; sourceTree = "<group>"; };
 		CF6A76E92BF670B700C65D07 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CF6A76EC2BF6712000C65D07 /* LocalizedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedText.swift; sourceTree = "<group>"; };
-		CF6A76F12BF6715C00C65D07 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = Localized.strings; sourceTree = "<group>"; };
 		CF6A76F42BF671A200C65D07 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = Localized.strings; sourceTree = "<group>"; };
 		CF6A76F62BF6720900C65D07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Localized.strings; sourceTree = "<group>"; };
 		CF6A76F72BF672F200C65D07 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
@@ -316,18 +314,9 @@
 			isa = PBXGroup;
 			children = (
 				CF6A76EF2BF6714400C65D07 /* en-US.lproj */,
-				CF6A76EE2BF6713500C65D07 /* pt-BR.lproj */,
 				CF6A76EC2BF6712000C65D07 /* LocalizedText.swift */,
 			);
 			path = "static texts";
-			sourceTree = "<group>";
-		};
-		CF6A76EE2BF6713500C65D07 /* pt-BR.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				CF6A76F02BF6715C00C65D07 /* Localized.strings */,
-			);
-			path = "pt-BR.lproj";
 			sourceTree = "<group>";
 		};
 		CF6A76EF2BF6714400C65D07 /* en-US.lproj */ = {
@@ -437,7 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6A76F52BF671A200C65D07 /* Localized.strings in Resources */,
-				CF6A76F22BF6715C00C65D07 /* Localized.strings in Resources */,
 				CF1BBC632BF5CEE4007FDF9B /* Assets.xcassets in Resources */,
 				CF1BBC642BF5CEE4007FDF9B /* LaunchScreen.storyboard in Resources */,
 			);
@@ -509,14 +497,6 @@
 				CF1BBC532BF5CEE4007FDF9B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CF6A76F02BF6715C00C65D07 /* Localized.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF6A76F12BF6715C00C65D07 /* pt-BR */,
-			);
-			name = Localized.strings;
 			sourceTree = "<group>";
 		};
 		CF6A76F32BF671A200C65D07 /* Localized.strings */ = {
