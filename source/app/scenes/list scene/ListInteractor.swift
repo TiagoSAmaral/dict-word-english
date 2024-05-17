@@ -9,4 +9,20 @@ import Foundation
 
 final class ListInteractor {
     
+    var localStorageWorker: LocalStorable?
+    var fetchApiWorker: ApiRequestable?
+    var presenter: ListPresentable?
+    
+    func fetchListFromRemote() {
+    }
+    
+    func fetchFavoritesFromLocal() {
+    }
+    
+    func fetchHistoryFromLocal() {
+    }
+    
+    func sendContentToView(content: IModel) {
+        presenter?.render(content)
+    }
 }
