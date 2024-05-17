@@ -1,0 +1,30 @@
+@startuml
+!theme aws-orange
+
+object User {
+    identifier: String
+    name: String
+    email: String
+    password: String
+}
+
+object Word {
+    identifier: String
+    fonetic: String
+    word: String
+    meanings: []
+}
+
+object Favorite {
+    identifier: String
+    userIdentifier: String
+    wordIdentifier: String
+}
+
+object Cache {
+    identifier: String
+    keyword: String
+    value: Word
+}
+
+@enduml

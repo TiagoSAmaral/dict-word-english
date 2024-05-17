@@ -1,0 +1,9 @@
+@startuml
+!theme aws-orange
+App -> CacheLocal: GET Request Word
+CacheLocal --> App: Response Failure
+App -> APIDict: GET Request Word
+APIDict --> App: Response Success
+App -> CacheLocal: Post Word
+CacheLocal --> App: 
+@enduml
