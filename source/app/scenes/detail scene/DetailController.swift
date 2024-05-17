@@ -8,8 +8,4 @@
 import UIKit
 
 final class DetailController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

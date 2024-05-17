@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ApiRequestable {
-    func fetchList()
+    
 }
