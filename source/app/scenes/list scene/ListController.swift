@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+final class ListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+//        title = "List Controller"
         view.backgroundColor = .red
     }
 }

@@ -10,6 +10,9 @@ import UIKit
 enum ListSceneFactory {
     
     static func makeScene(with content: Model? = nil) -> UIViewController? {
-        ListViewController()
+        let controller = ListController()
+        controller.title = "List Controller"
+        
+        return controller
     }
 }
