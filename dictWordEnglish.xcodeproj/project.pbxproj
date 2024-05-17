@@ -14,7 +14,7 @@
 		CF1BBC632BF5CEE4007FDF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1BBC512BF5CEE4007FDF9B /* Assets.xcassets */; };
 		CF1BBC642BF5CEE4007FDF9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1BBC522BF5CEE4007FDF9B /* LaunchScreen.storyboard */; };
 		CF1BBC672BF5CEE4007FDF9B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC582BF5CEE4007FDF9B /* NavigationController.swift */; };
-		CF1BBC682BF5CEE4007FDF9B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC5A2BF5CEE4007FDF9B /* Model.swift */; };
+		CF1BBC682BF5CEE4007FDF9B /* IModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC5A2BF5CEE4007FDF9B /* IModel.swift */; };
 		CF1BBC692BF5CEE4007FDF9B /* SceneStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC5C2BF5CEE4007FDF9B /* SceneStarter.swift */; };
 		CF1BBC6A2BF5CEE4007FDF9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC5D2BF5CEE4007FDF9B /* AppDelegate.swift */; };
 		CF1BBC6C2BF5CEF1007FDF9B /* dictWordEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1BBC602BF5CEE4007FDF9B /* dictWordEnglishTests.swift */; };
@@ -32,9 +32,18 @@
 		CF6A76FF2BF6A1B800C65D07 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A76FE2BF6A1B800C65D07 /* ListInteractor.swift */; };
 		CF6A77012BF6A1C000C65D07 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77002BF6A1C000C65D07 /* ListPresenter.swift */; };
 		CF6A77032BF6A1CC00C65D07 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77022BF6A1CC00C65D07 /* ListView.swift */; };
-		CF6A77082BF6A3B900C65D07 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77072BF6A3B900C65D07 /* Networker.swift */; };
+		CF6A77082BF6A3B900C65D07 /* INetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77072BF6A3B900C65D07 /* INetworkWorker.swift */; };
 		CF6A770A2BF6A75C00C65D07 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77092BF6A75C00C65D07 /* DetailController.swift */; };
 		CF6A770C2BF6A76C00C65D07 /* DetailSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A770B2BF6A76C00C65D07 /* DetailSceneFactory.swift */; };
+		CF6A770F2BF70A1700C65D07 /* LocalStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A770E2BF70A1700C65D07 /* LocalStorable.swift */; };
+		CF6A77112BF70A2800C65D07 /* ApiRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77102BF70A2800C65D07 /* ApiRequestable.swift */; };
+		CF6A77132BF70A3800C65D07 /* ListPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77122BF70A3800C65D07 /* ListPresentable.swift */; };
+		CF6A77152BF70A8700C65D07 /* IUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77142BF70A8700C65D07 /* IUser.swift */; };
+		CF6A77182BF70BDD00C65D07 /* SigninSignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77172BF70BDD00C65D07 /* SigninSignUpController.swift */; };
+		CF6A771A2BF70C2000C65D07 /* SigninSignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77192BF70C2000C65D07 /* SigninSignUpPresenter.swift */; };
+		CF6A771C2BF70C2B00C65D07 /* SigninSignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A771B2BF70C2B00C65D07 /* SigninSignUpInteractor.swift */; };
+		CF6A771E2BF70C3900C65D07 /* SigninSignUpSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A771D2BF70C3900C65D07 /* SigninSignUpSceneFactory.swift */; };
+		CF6A77212BF70D5C00C65D07 /* RealmMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6A77202BF70D5C00C65D07 /* RealmMigrationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +64,7 @@
 		CF1BBC542BF5CEE4007FDF9B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		CF1BBC552BF5CEE4007FDF9B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1BBC582BF5CEE4007FDF9B /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		CF1BBC5A2BF5CEE4007FDF9B /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CF1BBC5A2BF5CEE4007FDF9B /* IModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IModel.swift; sourceTree = "<group>"; };
 		CF1BBC5C2BF5CEE4007FDF9B /* SceneStarter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneStarter.swift; sourceTree = "<group>"; };
 		CF1BBC5D2BF5CEE4007FDF9B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF1BBC602BF5CEE4007FDF9B /* dictWordEnglishTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dictWordEnglishTests.swift; sourceTree = "<group>"; };
@@ -74,9 +83,18 @@
 		CF6A76FE2BF6A1B800C65D07 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		CF6A77002BF6A1C000C65D07 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		CF6A77022BF6A1CC00C65D07 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		CF6A77072BF6A3B900C65D07 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		CF6A77072BF6A3B900C65D07 /* INetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INetworkWorker.swift; sourceTree = "<group>"; };
 		CF6A77092BF6A75C00C65D07 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		CF6A770B2BF6A76C00C65D07 /* DetailSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSceneFactory.swift; sourceTree = "<group>"; };
+		CF6A770E2BF70A1700C65D07 /* LocalStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorable.swift; sourceTree = "<group>"; };
+		CF6A77102BF70A2800C65D07 /* ApiRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestable.swift; sourceTree = "<group>"; };
+		CF6A77122BF70A3800C65D07 /* ListPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresentable.swift; sourceTree = "<group>"; };
+		CF6A77142BF70A8700C65D07 /* IUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUser.swift; sourceTree = "<group>"; };
+		CF6A77172BF70BDD00C65D07 /* SigninSignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignUpController.swift; sourceTree = "<group>"; };
+		CF6A77192BF70C2000C65D07 /* SigninSignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignUpPresenter.swift; sourceTree = "<group>"; };
+		CF6A771B2BF70C2B00C65D07 /* SigninSignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignUpInteractor.swift; sourceTree = "<group>"; };
+		CF6A771D2BF70C3900C65D07 /* SigninSignUpSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignUpSceneFactory.swift; sourceTree = "<group>"; };
+		CF6A77202BF70D5C00C65D07 /* RealmMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigrationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,7 @@
 		CF1BBC4A2BF5CEE4007FDF9B /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CF6A77162BF70B5800C65D07 /* sign-in-up */,
 				CF1BBC4B2BF5CEE4007FDF9B /* detail scene */,
 				CF1BBC4C2BF5CEE4007FDF9B /* list scene */,
 			);
@@ -141,6 +160,7 @@
 		CF1BBC4C2BF5CEE4007FDF9B /* list scene */ = {
 			isa = PBXGroup;
 			children = (
+				CF6A770D2BF709F600C65D07 /* interfaces */,
 				CF1BBC4D2BF5CEE4007FDF9B /* ListController.swift */,
 				CF1BBC4E2BF5CEE4007FDF9B /* ListSceneFactory.swift */,
 				CF6A76FE2BF6A1B800C65D07 /* ListInteractor.swift */,
@@ -153,8 +173,9 @@
 		CF1BBC4F2BF5CEE4007FDF9B /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				CF6A77222BF70FED00C65D07 /* managers */,
 				CF6A76EB2BF670E200C65D07 /* static texts */,
-				CF6A76E42BF6707400C65D07 /* works */,
+				CF6A76E42BF6707400C65D07 /* workers */,
 				CF6A76D92BF66F4300C65D07 /* extensions */,
 				CF6A76D62BF66F1D00C65D07 /* colors */,
 				CF1BBC502BF5CEE4007FDF9B /* resources */,
@@ -194,8 +215,9 @@
 		CF1BBC592BF5CEE4007FDF9B /* interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BBC5A2BF5CEE4007FDF9B /* Model.swift */,
-				CF6A77072BF6A3B900C65D07 /* Networker.swift */,
+				CF1BBC5A2BF5CEE4007FDF9B /* IModel.swift */,
+				CF6A77072BF6A3B900C65D07 /* INetworkWorker.swift */,
+				CF6A77142BF70A8700C65D07 /* IUser.swift */,
 			);
 			path = interfaces;
 			sourceTree = "<group>";
@@ -203,7 +225,6 @@
 		CF1BBC5B2BF5CEE4007FDF9B /* app delegates */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BBC5C2BF5CEE4007FDF9B /* SceneStarter.swift */,
 				CF1BBC5D2BF5CEE4007FDF9B /* AppDelegate.swift */,
 			);
 			path = "app delegates";
@@ -284,13 +305,14 @@
 			path = uiview;
 			sourceTree = "<group>";
 		};
-		CF6A76E42BF6707400C65D07 /* works */ = {
+		CF6A76E42BF6707400C65D07 /* workers */ = {
 			isa = PBXGroup;
 			children = (
+				CF6A771F2BF70CE800C65D07 /* local storage */,
 				CF6A76E62BF6708A00C65D07 /* security */,
 				CF6A76E52BF6707F00C65D07 /* network */,
 			);
-			path = works;
+			path = workers;
 			sourceTree = "<group>";
 		};
 		CF6A76E52BF6707F00C65D07 /* network */ = {
@@ -325,6 +347,59 @@
 				CF6A76F32BF671A200C65D07 /* Localized.strings */,
 			);
 			path = "en-US.lproj";
+			sourceTree = "<group>";
+		};
+		CF6A770D2BF709F600C65D07 /* interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CF6A770E2BF70A1700C65D07 /* LocalStorable.swift */,
+				CF6A77102BF70A2800C65D07 /* ApiRequestable.swift */,
+				CF6A77122BF70A3800C65D07 /* ListPresentable.swift */,
+			);
+			path = interfaces;
+			sourceTree = "<group>";
+		};
+		CF6A77162BF70B5800C65D07 /* sign-in-up */ = {
+			isa = PBXGroup;
+			children = (
+				CF6A77172BF70BDD00C65D07 /* SigninSignUpController.swift */,
+				CF6A77192BF70C2000C65D07 /* SigninSignUpPresenter.swift */,
+				CF6A771B2BF70C2B00C65D07 /* SigninSignUpInteractor.swift */,
+				CF6A771D2BF70C3900C65D07 /* SigninSignUpSceneFactory.swift */,
+			);
+			path = "sign-in-up";
+			sourceTree = "<group>";
+		};
+		CF6A771F2BF70CE800C65D07 /* local storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "local storage";
+			sourceTree = "<group>";
+		};
+		CF6A77222BF70FED00C65D07 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6A77242BF70FFA00C65D07 /* scene starter */,
+				CF6A77232BF70FF300C65D07 /* realm managers */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
+		CF6A77232BF70FF300C65D07 /* realm managers */ = {
+			isa = PBXGroup;
+			children = (
+				CF6A77202BF70D5C00C65D07 /* RealmMigrationManager.swift */,
+			);
+			path = "realm managers";
+			sourceTree = "<group>";
+		};
+		CF6A77242BF70FFA00C65D07 /* scene starter */ = {
+			isa = PBXGroup;
+			children = (
+				CF1BBC5C2BF5CEE4007FDF9B /* SceneStarter.swift */,
+			);
+			path = "scene starter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,9 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6A76FF2BF6A1B800C65D07 /* ListInteractor.swift in Sources */,
+				CF6A771C2BF70C2B00C65D07 /* SigninSignUpInteractor.swift in Sources */,
 				CF1BBC6A2BF5CEE4007FDF9B /* AppDelegate.swift in Sources */,
+				CF6A77112BF70A2800C65D07 /* ApiRequestable.swift in Sources */,
 				CF6A77012BF6A1C000C65D07 /* ListPresenter.swift in Sources */,
+				CF6A771A2BF70C2000C65D07 /* SigninSignUpPresenter.swift in Sources */,
 				CF6A77032BF6A1CC00C65D07 /* ListView.swift in Sources */,
+				CF6A77182BF70BDD00C65D07 /* SigninSignUpController.swift in Sources */,
 				CF6A76ED2BF6712100C65D07 /* LocalizedText.swift in Sources */,
 				CF1BBC612BF5CEE4007FDF9B /* ListController.swift in Sources */,
 				CF6A76D82BF66F3300C65D07 /* ColorAssets.swift in Sources */,
@@ -458,12 +537,17 @@
 				CF6A76DF2BF66F8300C65D07 /* Constraints.swift in Sources */,
 				CF6A76E12BF66FB100C65D07 /* Empty.swift in Sources */,
 				CF1BBC622BF5CEE4007FDF9B /* ListSceneFactory.swift in Sources */,
+				CF6A77152BF70A8700C65D07 /* IUser.swift in Sources */,
 				CF6A76E32BF66FF400C65D07 /* ClassIdentifier.swift in Sources */,
+				CF6A770F2BF70A1700C65D07 /* LocalStorable.swift in Sources */,
 				CF6A76EA2BF670B700C65D07 /* NetworkError.swift in Sources */,
+				CF6A77212BF70D5C00C65D07 /* RealmMigrationManager.swift in Sources */,
+				CF6A77132BF70A3800C65D07 /* ListPresentable.swift in Sources */,
 				CF6A770C2BF6A76C00C65D07 /* DetailSceneFactory.swift in Sources */,
-				CF6A77082BF6A3B900C65D07 /* Networker.swift in Sources */,
-				CF1BBC682BF5CEE4007FDF9B /* Model.swift in Sources */,
+				CF6A77082BF6A3B900C65D07 /* INetworkWorker.swift in Sources */,
+				CF1BBC682BF5CEE4007FDF9B /* IModel.swift in Sources */,
 				CF1BBC692BF5CEE4007FDF9B /* SceneStarter.swift in Sources */,
+				CF6A771E2BF70C3900C65D07 /* SigninSignUpSceneFactory.swift in Sources */,
 				CF6A76F82BF672F200C65D07 /* KeychainAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
