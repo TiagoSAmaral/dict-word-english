@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/// NetworkError usado para tratamento de erros em operações de requisição
+///
+/// Usado para receber e propagar mensagens sobre eventos de erros e condições inesperadas durante a tarefa de requisições.
 enum NetworkError: Error {
 
     case offline(text: String)
