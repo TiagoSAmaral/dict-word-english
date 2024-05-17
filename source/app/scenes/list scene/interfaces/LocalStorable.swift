@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LocalStorable {
-    func fetchItems(from user: IUser?)
+    func fetchItems()
     func saveItem()
     func saveItemLikeFavorite()
 }
