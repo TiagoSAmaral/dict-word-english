@@ -5,4 +5,11 @@
 //  Created by Tiago Amaral on 16/05/24.
 //
 
-import Foundation
+import UIKit
+
+final class DetailController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
