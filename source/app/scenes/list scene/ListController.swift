@@ -8,6 +8,8 @@
 import UIKit
 
 final class ListController: UIViewController {
+    
+    var interactor: ApiRequestable?
 
     override func viewDidLoad() {
         super.viewDidLoad()

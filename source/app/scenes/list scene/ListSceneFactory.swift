@@ -13,6 +13,8 @@ enum ListSceneFactory {
         let controller = ListController()
         controller.title = "List Controller"
         
+        controller.interactor = NetworkAPIWorker()
+        
         return controller
     }
 }
