@@ -1,0 +1,23 @@
+/*
+  Localizable.strings
+ dictWordEnglish
+
+  Created by Tiago Amaral on 16/05/24.
+  Copyright © 2024 Tiago Amaral. All rights reserved.
+*/
+
+"networkErrorNotDefined" = "Something is wrong, please try again. In case this error persist, contact the support.";
+"networkOffline" = "Check your internet connection.";
+"serverNotResponse" = "Contact the support.";
+"pullToRefreshText" = "Updating...";
+"tokenIsRequired" = "A authorization token is required.";
+"localizationApi" = "en_US";
+"nameText" = "Name";
+"setText" = "Set";
+"rarityText" = "Rarity";
+"attackText" = "Attack";
+"costText" = "Mana";
+"healthText" = "Health";
+"keyadvisorNotFound" = "Token not implemented.";
+"urlAuthorizationNotFound" = "Url to authorization not found.";
+"lastPage" = "This is the end";
